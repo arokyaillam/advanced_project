@@ -6,9 +6,13 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "axios": "^1.12.2",
+    "elysia": "latest",
+    "protobufjs": "^7.5.4",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
+    "@types/ws": "^8.18.1",
     "bun-types": "latest"
   },
   "module": "src/index.js"
