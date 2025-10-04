@@ -3,7 +3,8 @@ import { getMarketFeedUrl } from "./ws/upstoxAuth";
 import { initProtobuf } from "./ws/protoLoader";
 import { connectWebSocket } from "./ws/wsClient";
 import { setupGateway } from "./ws/wsGateway";
-
+import dotenv from "dotenv";
+dotenv.config({ path: "../../.env" });
 // Environment variables are loaded by Bun automatically
 
 (async () => {

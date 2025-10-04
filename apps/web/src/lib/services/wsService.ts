@@ -1,3 +1,4 @@
+import { WS_BASE_URL } from '$lib/config';
 export interface WebSocketMessage {
   type?: string;
   feeds?: Record<string, any>;
@@ -30,7 +31,7 @@ export class WebSocketService {
   private isManualDisconnect = false;
   private eventListeners: Partial<WebSocketServiceEvents> = {};
 
-  constructor(private url: string = 'ws://localhost:4000/stream') {}
+  constructor(private url: string = WS_BASE_URL) {}
 
   public connect(): void {
     if (this.ws?.readyState === WebSocket.OPEN) {
