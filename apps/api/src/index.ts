@@ -19,7 +19,7 @@ import { setupGateway } from "./ws/wsGateway";
  try {
    const wsUrl = await getMarketFeedUrl(accessToken);
    console.log("✅ Upstox authentication successful");
-   const upstoxWS = await connectWebSocket(wsUrl, ["NSE_INDEX|Nifty 50"]);
+   const upstoxWS = await connectWebSocket(wsUrl, ["NSE_FO|50979"]);
    console.log("✅ Connected to Upstox live market data feed");
 
    const app = new Elysia()

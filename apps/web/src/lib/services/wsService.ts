@@ -76,20 +76,20 @@ export class WebSocketService {
           if (message.feeds) {
             const firstFeed = Object.values(message.feeds)[0] as any;
 
-            if (firstFeed?.fullFeed?.indexFF?.ltpc?.ltp) {
-              const newLtp = firstFeed.fullFeed.indexFF.ltpc.ltp;
+            if (firstFeed?.fullFeed?.marketFF?.ltpc?.ltp) {
+              const newLtp = firstFeed.fullFeed.marketFF.ltpc.ltp;
               ltp.set(newLtp);
               console.log('📊 Updated LTP in store:', newLtp);
             }
 
-            if (firstFeed?.fullFeed?.indexFF?.ltpc?.cp) {
-              const newCp = firstFeed.fullFeed.indexFF.ltpc.cp;
+            if (firstFeed?.fullFeed?.marketFF?.ltpc?.cp) {
+              const newCp = firstFeed.fullFeed.marketFF.ltpc.cp;
               cp.set(newCp);
               console.log('📊 Updated CP in store:', newCp);
             }
 
-            if (firstFeed?.fullFeed?.indexFF?.ltpc?.prevClose) {
-              const newPrevClose = firstFeed.fullFeed.indexFF.ltpc.prevClose;
+            if (firstFeed?.fullFeed?.marketFF?.ltpc?.prevClose) {
+              const newPrevClose = firstFeed.fullFeed.marketFF.ltpc.prevClose;
               prevClose.set(newPrevClose);
               console.log('📊 Updated PrevClose in store:', newPrevClose);
             }
